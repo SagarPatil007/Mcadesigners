@@ -3,7 +3,7 @@ import {FiMenu} from 'react-icons/fi';
 import logoImage from '../asset/FinalLogo.png'
 
 const Navbar = () => {
-  const[open,setOpen] = useState('true');
+  const[open,setOpen] = useState(false);
 
   return (
     //  draw navbar container
@@ -15,7 +15,7 @@ const Navbar = () => {
           <img src={logoImage} alt='img' width={220} height={55}/>
 
           {/* Hamburger icon */}
-          <FiMenu className='lg:hidden block h-6 w-6 cursor-pointer' onClick={() =>{ setOpen(!open); }}/>
+          <FiMenu className='lg:hidden block h-6 w-6 cursor-pointer' onClick={() =>{setOpen(!open) }}/>
 
           {/* Links */}
           <nav className={`${ open ? "block": "hidden"} w-full lg:flex lg:items-center lg:w-auto`}> 
